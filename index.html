@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TwinTech Assistant — Twin Electronicz</title>
+  <meta name="description" content="TwinTech Assistant helps you check in faster and get clearer answers before your visit to Twin Electronicz." />
+  <style>
+    :root { --max: 980px; --pad: 18px; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.45; color:#111; background:#fff; }
+    header { border-bottom:1px solid #eee; position:sticky; top:0; background:#fff; }
+    .wrap { max-width: var(--max); margin:0 auto; padding: var(--pad); }
+    .row { display:flex; gap:14px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+    .brand { display:flex; gap:10px; align-items:center; }
+    .logo { width:38px; height:38px; border-radius:10px; background:#111; display:grid; place-items:center; color:#fff; font-weight:700; }
+    nav a { margin-left:14px; text-decoration:none; color:#111; opacity:.8; }
+    nav a:hover { opacity:1; }
+    .hero { padding: 28px 0 10px; }
+    .h1 { font-size: clamp(28px, 4vw, 44px); margin:0 0 8px; letter-spacing:-0.02em; }
+    .sub { font-size: 16px; opacity:.85; margin:0 0 16px; }
+    .cta { display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid #111; background:#111; color:#fff; text-decoration:none; font-weight:600; }
+    .btn.secondary { background:#fff; color:#111; }
+    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:14px; margin: 18px 0 26px; }
+    .card { border:1px solid #eee; border-radius:18px; padding:16px; box-shadow: 0 1px 0 rgba(0,0,0,.02); background:#fff; }
+    .span6 { grid-column: span 6; }
+    .span12 { grid-column: span 12; }
+    @media (max-width: 780px){ .span6 { grid-column: span 12; } }
+    h2 { margin:0 0 10px; font-size: 18px; }
+    ul { margin: 0; padding-left: 18px; }
+    .muted { opacity:.75; }
+    .notice { border-left:4px solid #111; background:#fafafa; }
+    footer { border-top:1px solid #eee; margin-top: 24px; }
+    .small { font-size: 12px; opacity:.75; }
+    .pill { display:inline-block; font-size:12px; padding:4px 10px; border-radius:999px; border:1px solid #eee; background:#fafafa; }
+    .chatbox { min-height: 310px; display:flex; flex-direction:column; gap:10px; }
+    .chatlog { border:1px solid #eee; border-radius:14px; padding:12px; height: 200px; overflow:auto; background:#fcfcfc; }
+    .msg { margin: 0 0 8px; }
+    .msg b { display:block; font-size:12px; opacity:.7; margin-bottom:2px; }
+    .chatrow { display:flex; gap:8px; }
+    input[type="text"] { flex:1; padding:10px 12px; border-radius:12px; border:1px solid #ddd; font-size:14px; }
+    button { padding:10px 12px; border-radius:12px; border:1px solid #111; background:#111; color:#fff; font-weight:700; cursor:pointer; }
+    button:disabled { opacity:.5; cursor:not-allowed; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap row">
+      <div class="brand">
+        <div class="logo">TE</div>
+        <div>
+          <div style="font-weight:800;">TwinTech Assistant</div>
+          <div class="small">by Twin Electronicz</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#chat">Try it</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="pill">Customer Intake • Faster Check-In • Clearer Estimates</span>
+      <h1 class="h1">Smarter repairs start here.</h1>
+      <p class="sub">
+        TwinTech Assistant helps you describe your issue, asks a couple quick questions, and guides you to the best next step.
+        Final diagnostics and pricing are always confirmed in-store at Twin Electronicz.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#chat">Start the intake</a>
+        <a class="btn secondary" href="#visit">Get location & hours</a>
+      </div>
+    </section>
+
+    <section class="grid" id="how">
+      <div class="card span6">
+        <h2>What it helps with</h2>
+        <ul>
+          <li>Identifying your device (iPhone, Samsung, tablets)</li>
+          <li>Collecting symptoms (screen, battery, charging, etc.)</li>
+          <li>Setting expectations and next steps</li>
+          <li>Sharing <b>general</b> price ranges (when appropriate)</li>
+        </ul>
+      </div>
+
+      <div class="card span6">
+        <h2>What it won’t do</h2>
+        <ul>
+          <li>No repair instructions</li>
+          <li>No board-level diagnosis</li>
+          <li>No guaranteed outcomes</li>
+          <li>No final pricing without inspection</li>
+        </ul>
+        <p class="muted" style="margin-top:10px;">
+          This keeps things safe and ensures you get accurate service.
+        </p>
+      </div>
+
+      <div class="card span12 notice">
+        <h2>Important notice</h2>
+        <p style="margin:0;">
+          TwinTech Assistant provides general guidance only. Final diagnostics, pricing, and repairs are determined
+          in-store by <b>Twin Electronicz</b> after inspection.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid" id="privacy">
+      <div class="card span6">
+        <h2>Privacy</h2>
+        <ul>
+          <li>No personal information is permanently stored</li>
+          <li>No photos/messages/IMEI are saved</li>
+          <li>In-store inspection is required for final quote</li>
+        </ul>
+      </div>
+
+      <div class="card span6">
+        <h2>Download the customer guide (PDF)</h2>
+        <p class="muted" style="margin-top:0;">
+          Add your PDF link here after you upload it to your site.
+        </p>
+        <ul>
+          <li><a href="TwinTech_Assistant_Customer_Guide.pdf">Customer Guide (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid" id="chat">
+      <div class="card span12">
+        <h2>Try the intake</h2>
+        <p class="muted" style="margin-top:0;">
+          This demo intake is a placeholder. When you add a real chat provider (or your own backend), replace this section.
+        </p>
+
+        <div class="chatbox">
+          <div class="chatlog" id="chatlog" aria-live="polite">
+            <p class="msg"><b>TwinTech Assistant</b>Hi! What device are you having trouble with (iPhone, Samsung, or tablet)?</p>
+          </div>
+          <div class="chatrow">
+            <input id="msg" type="text" placeholder="Type here…" />
+            <button id="send">Send</button>
+          </div>
+          <p class="small muted">
+            Note: This demo does not contact any AI. It’s just a front-end example so your site looks complete.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" id="visit">
+      <div class="card span6">
+        <h2>Visit Twin Electronicz</h2>
+        <ul>
+          <li><b>Address:</b> <span class="muted">[Add your address]</span></li>
+          <li><b>Hours:</b> <span class="muted">[Add your hours]</span></li>
+          <li><b>Phone:</b> <span class="muted">[Add your phone]</span></li>
+        </ul>
+        <p class="muted">Want us to add a booking link? Put it here.</p>
+      </div>
+
+      <div class="card span6">
+        <h2>Common issues we handle</h2>
+        <ul>
+          <li>iPhone screens, batteries, charging issues</li>
+          <li>Samsung screens, charging, battery/power issues</li>
+          <li>Tablet screens and batteries</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="row">
+        <div class="small">© <span id="year"></span> Twin Electronicz • TwinTech Assistant</div>
+        <div class="small">General guidance only • Final quote in-store</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple demo intake (no AI calls)
+    const chatlog = document.getElementById("chatlog");
+    const msg = document.getElementById("msg");
+    const send = document.getElementById("send");
+
+    function addMessage(who, text){
+      const p = document.createElement("p");
+      p.className = "msg";
+      p.innerHTML = "<b>" + who + "</b>" + text.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+      chatlog.appendChild(p);
+      chatlog.scrollTop = chatlog.scrollHeight;
+    }
+
+    function botReply(userText){
+      const t = userText.toLowerCase();
+      if (t.includes("iphone")) return "Thanks—what iPhone model is it (if you know it)?";
+      if (t.includes("samsung")) return "Got it—what Samsung model is it (Galaxy S, A, Note, etc.)?";
+      if (t.includes("tablet") || t.includes("ipad")) return "Okay—what tablet model is it (iPad model, Samsung Tab, etc.)?";
+      if (t.includes("charge") || t.includes("charging")) return "Understood. Does it charge at all, and does wireless charging work (if available)?";
+      if (t.includes("screen")) return "Is the screen cracked, black, or showing lines—and does touch still work?";
+      if (t.includes("battery")) return "Does it shut off randomly, drain fast, or get hot?";
+      if (t.includes("water") || t.includes("liquid")) return "Thanks for letting me know. Liquid exposure can vary, so an in-store inspection is best to avoid further damage.";
+      return "Thanks—what’s the main symptom (screen, battery/power, charging, camera/audio, or not turning on)?";
+    }
+
+    function handleSend(){
+      const text = msg.value.trim();
+      if (!text) return;
+      addMessage("You", text);
+      msg.value = "";
+      send.disabled = true;
+      setTimeout(() => {
+        addMessage("TwinTech Assistant", botReply(text));
+        send.disabled = false;
+      }, 350);
+    }
+
+    send.addEventListener("click", handleSend);
+    msg.addEventListener("keydown", (e) => { if (e.key === "Enter") handleSend(); });
+  </script>
+</body>
+</html>
